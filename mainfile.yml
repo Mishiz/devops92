@@ -6,7 +6,7 @@
   roles:
    - devs
 
-- name: prod configuration
+- name: prod-server configuration
   hosts: prod
   become: yes
 

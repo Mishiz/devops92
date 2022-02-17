@@ -1,7 +1,9 @@
 ---
 # tasks file for devs
 - name: Ensure Apps is installed
-  apt: name={{ item }} state=installed
+  apt:
+    name: "{{ item }}"
+    state: installed
   with_items:
     - default-jdk
     - git

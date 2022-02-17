@@ -3,7 +3,7 @@
 - name: Ensure Apps is installed
   apt:
     name: {{ item }}
-    state: present
+    state: installed
   with_items:
     - default-jdk
     - git

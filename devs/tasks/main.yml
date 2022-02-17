@@ -1,2 +1,18 @@
 ---
 # tasks file for devs
+- name: Ensure Apps is installed
+  apt:
+    name: {{ item }}
+    state: present
+  with items:
+    - default-jdk
+    - git
+    - maven
+
+- name: Clone app from git
+  git:
+    repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
+    dest: {{ box_path }}/
+- name: Make WAR file
+  shell:
+    cmd: mvn -f {{ box_path }}/pom.xml package

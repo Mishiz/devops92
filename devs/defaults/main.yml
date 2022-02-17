@@ -1,2 +1,4 @@
 ---
 # defaults file for devs
+box_path: /tmp/boxfuse
+

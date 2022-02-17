@@ -12,7 +12,7 @@
 - name: Clone boxfuse from git
   git:
     repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
-    dest: {{ box_path }}/
+    dest: "{{ box_path }}"/
 - name: Make WAR file
   shell:
     cmd: mvn -f {{ box_path }}/pom.xml package

@@ -2,4 +2,4 @@
 # defaults file for prods
 
 box_path: /tmp/boxfuse
-tomcat_path: /var/lib/tomcat9/webapps/
+tomcat_path: /var/lib/tomcat9/webapps

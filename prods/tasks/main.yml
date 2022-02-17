@@ -14,7 +14,7 @@
     state: absent
 - name: Pull WAR File
   synchronize:
-    src: "{{ box_path }}/hello-1.0.war"
+    src: "{{ box_path }}/target/hello-1.0.war"
     dest: "{{ tomcat_path }}/ROOT.war"
   delegate_to: 10.129.0.31
   notify:

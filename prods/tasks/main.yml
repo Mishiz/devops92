@@ -5,7 +5,7 @@
   apt:
     name: { { item } }
     state: present
-  with items:
+  with_items:
     - default-jdk
     - tomcat9
 - name: Clean tomcat dir

@@ -1,0 +1,16 @@
+---
+- name: dev-server configuation
+  hosts: dev
+  become: yes
+
+  roles:
+   - devs
+
+- name: prod configuration
+  hosts: prod
+  become: yes
+
+  roles:
+   - prods
+
+

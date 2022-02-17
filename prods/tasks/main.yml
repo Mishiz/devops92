@@ -3,14 +3,14 @@
 
 - name: Ensure Apps is installed
   apt:
-    name: { { item } }
+    name: "{{ item }}"
     state: present
   with_items:
     - default-jdk
     - tomcat9
 - name: Clean tomcat dir
   file:
-    path: {{ tomcat_path }}/ROOT
+    path: "{{ tomcat_path }}"/ROOT
     state: absent
 - name: Pull WAR File
   synchronize:
